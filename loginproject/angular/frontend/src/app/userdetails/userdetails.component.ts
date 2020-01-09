@@ -99,12 +99,7 @@ export class UserdetailsComponent implements OnInit {
 
     });
   }
-
-
-
-
-
-
+//hgfyughfg
 
   delete(deleteIndex) {
     console.log('index i', deleteIndex)

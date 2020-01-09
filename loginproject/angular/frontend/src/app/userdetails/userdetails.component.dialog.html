@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Delete record</h2>
+<mat-dialog-content class="mat-typography">
+    <h3>Do you really want to delete thie record</h3>
+
+    <mat-dialog-actions align="end">
+        <button class="cancel-class" mat-button mat-dialog-close>Cancel</button>
+        <button class="edit-class" mat-button [mat-dialog-close]="true" cdkFocusInitial>Yes</button>
+    </mat-dialog-actions>

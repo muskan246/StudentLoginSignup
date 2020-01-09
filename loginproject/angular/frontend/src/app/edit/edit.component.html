@@ -1,0 +1,67 @@
+<h2 mat-dialog-title>Update record</h2>
+<mat-dialog-content>
+    <form [formGroup]="service.details" class="normal-form">
+        <mat-grid-list cols="1" rowHeight="280px">
+            <mat-grid-tile>
+
+                <div>
+                    <mat-form-field>
+                        <input formControlName="fullName" type="text" value="{{formData.fullName}}" matInput placeholder="Full Name">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="email" type="email" value={{formData.email}} matInput placeholder="Email">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="password" type="password" value={{formData.password}} matInput placeholder="Password">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="confirmPassword" type="password" value={{formData.confirmPassword}} matInput placeholder="Confirm Password">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="contactno" type="tel" value={{formData.contactno}} matInput placeholder="Contact No.">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="houseno" type="text" value={{formData.houseno}} matInput placeholder="House No.">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="street" type="text" value={{formData.street}} matInput placeholder="Street">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="city" type="text" value={{formData.city}} matInput placeholder="City">
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <input formControlName="dob" value="{{formData.dob | date : 'dd/MM/yyyy'}}" matInput placeholder="Date of Birth">
+
+                    </mat-form-field>
+
+
+                    <mat-radio-group formControlName="gender">
+                        <span *ngIf='checkingvalue == "M"'>
+
+                                                        <mat-radio-button value="F">Female</mat-radio-button>
+                                                        <mat-radio-button value="M" checked>Male</mat-radio-button>
+                                                </span>
+                        <span *ngIf='checkingvalue == "F"'>
+                                                        <mat-radio-button value="M">Male</mat-radio-button>
+                                                        <mat-radio-button value="F" checked>Female</mat-radio-button>
+                                                </span>
+
+
+
+                    </mat-radio-group>
+
+
+                </div>
+
+            </mat-grid-tile>
+        </mat-grid-list>
+
+    </form>
+
+
+    <mat-dialog-actions align="end">
+        <button class="cancel-class" mat-button mat-dialog-close>Cancel</button>
+        <button class="edit-class" mat-button (click)="newDialogData()" [mat-dialog-close]="true" cdkFocusInitial>Update</button>
+
+    </mat-dialog-actions>

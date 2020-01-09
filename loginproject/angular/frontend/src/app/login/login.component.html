@@ -1,0 +1,26 @@
+<h2 class="header"> LOGIN </h2>
+
+<form [formGroup]="service.logindetails" class="normal-form">
+    <mat-grid-list cols="1" rowHeight="550px">
+        <div class="imgcontainer">
+            <img src="../../assets/user.jpg" alt="Avatar" class="avatar">
+        </div>
+        <mat-grid-tile>
+            <div class="controles-container">
+
+                <mat-form-field style="margin-top: 137px;">
+                    <input type="text" formControlName="userName" matInput placeholder="Username">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="password" formControlName="password" matInput placeholder="Password">
+                </mat-form-field>
+                <button class="button-class" mat-button (click)='gettingLoginData()'><span
+                        class="button-register">Login</span></button>
+
+
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+    {{service.logindetails.value|json}}
+
+</form>

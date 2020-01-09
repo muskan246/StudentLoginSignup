@@ -1,0 +1,31 @@
+.login-button {
+    margin-left: 95%;
+    background: none;
+    font-size: 23px;
+    color: white;
+}
+
+.button-register {
+    height: 28px;
+    width: 87px;
+    color: #fff;
+}
+
+.button-class {
+    margin-left: 47%;
+    margin-top: 62%;
+    width: 88px;
+    height: 33px;
+    font-size: 18px;
+    background: green;
+}
+
+.new-button {
+    color: white;
+    background-color: green;
+    font-family: sans-serif;
+    font-size: 17px;
+    width: 35%;
+    margin-left: 121px;
+    margin-top: 27px;
+}

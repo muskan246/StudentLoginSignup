@@ -1,0 +1,15 @@
+.cancel-class {
+    font-size: 15px;
+    background-color: gray;
+    width: 86px;
+    height: 31px;
+    color: white;
+}
+
+.edit-class {
+    font-size: 15px;
+    background-color: deeppink;
+    width: 86px;
+    height: 31px;
+    color: white;
+}

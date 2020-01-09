@@ -1,0 +1,22 @@
+.controles-container {
+    border: 3px solid grey;
+    border-radius: 33px;
+    width: 30%;
+    padding: 4%;
+    height: 65%;
+}
+
+.button-register {
+    height: 28px;
+    width: 87px;
+    color: #fff;
+}
+
+.button-class {
+    margin-left: 35%;
+    margin-top: 13%;
+    width: 88px;
+    height: 33px;
+    font-size: 18px;
+    background: green;
+}

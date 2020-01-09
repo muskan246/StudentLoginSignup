@@ -1,0 +1,64 @@
+<h2 class="header"> REGISTRATION FORM
+    <button class="login-button" mat-button routerLink="Login">Login</button> </h2>
+<form [formGroup]="service.details" class="normal-form">
+    <mat-grid-list cols="1" rowHeight="900px">
+        <mat-grid-tile>
+
+            <div class="controles-container">
+                <mat-form-field>
+                    <input type="text" formControlName="fullName" matInput placeholder="Full Name">
+                </mat-form-field>
+                <mat-form-field>
+                    <input [class.is-invalid]="service.details.get('userName').invalid && service.details.get('userName').touched" type="text" formControlName="userName" matInput placeholder="Username">
+                    <div *ngIf="service.details.get('userName').invalid && service.details.get('userName').touched">
+                        <small *ngIf="service.details.get('userName').errors?.required" class="text-danger">Username is
+                            required</small>
+                        <small *ngIf="service.details.get('userName').errors?.minlength" class="text-danger">Username
+                            must be atleat 3 characters</small>
+                        <small *ngIf="service.details.get('userName').errors?.forbiddenName" class="text-danger">
+                            Username is not allowed</small>
+                    </div>
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="email" formControlName="email" matInput placeholder="Email">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="password" formControlName="password" matInput placeholder="Password">
+                </mat-form-field>
+                <mat-form-field>
+                    <input [class.is-invalid]="service.details.errors?.misMatch" type="password" formControlName="confirmPassword" matInput placeholder="Confirm Password">
+                    <small class="text-danger" *ngIf="service.details.errors?.misMatch">Passwords do
+                        not match</small>
+
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="tel" formControlName="contactno" matInput placeholder="Contact No.">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="text" formControlName="houseno" matInput placeholder="House No.">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="text" formControlName="street" matInput placeholder="Street">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="text" formControlName="city" matInput placeholder="City">
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input type="date" formControlName="dob" matInput placeholder="Date of Birth">
+
+                </mat-form-field>
+                <mat-radio-group formControlName="gender">
+                    <mat-radio-button value="M">Male</mat-radio-button>
+                    <mat-radio-button value="F">Female</mat-radio-button>
+
+                </mat-radio-group>
+
+                <button class="new-button" mat-button (click)='gettingFormData()'>Register</button>
+
+            </div>
+
+        </mat-grid-tile>
+    </mat-grid-list>
+
+</form>

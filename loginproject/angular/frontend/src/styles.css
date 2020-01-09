@@ -1,0 +1,76 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+div.container {
+    margin: 0px 40px;
+}
+
+.fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+form.normal-form {
+    align-content: center;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 13%;
+    border-radius: 50%;
+    margin-top: 5%;
+}
+
+.controles-container {
+    border: 3px solid grey;
+    border-radius: 33px;
+    width: 30%;
+    padding: 4%;
+    height: 82%;
+}
+
+.controles-container>* {
+    width: 100%;
+}
+
+.add-bottom-padding {
+    padding-bottom: 0px;
+}
+
+mat-radio-group mat-radio-button {
+    margin-left: 1px;
+}
+
+.class-button {
+    padding-left: 40%;
+    padding-top: 10%;
+}
+
+.header {
+    background-color: hsl(251, 73%, 42%);
+    padding: 30px;
+    text-align: center;
+    margin-block-start: 0%;
+    color: white;
+}
+
+.cancel-class {
+    font-size: 15px;
+    background-color: gray;
+    width: 86px;
+    height: 31px;
+    color: white;
+}
+
+.edit-class {
+    font-size: 15px;
+    background-color: deeppink;
+    width: 86px;
+    height: 31px;
+    color: white;
+}
+
+.text-danger {
+    color: red;
+}

@@ -1,10 +1,25 @@
 <!-- <button mat-button (click)='displayingData()'>Display</button> -->
 <h2 class="header"> USER DETAILS
-    <button class="login-button" mat-button (click)='Logout()'>Logout</button> </h2>
+    <!-- <button class="login-button" mat-button (click)='Logout()'>Logout</button> </h2> -->
+    <!-- <button [matMenuTriggerFor]="menu" id="new" mat-button matTooltip="Setting"><mat-icon >dehaze</mat-icon></button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        
+      </mat-menu> -->
+
+    <!-- <button id="new" mat-button [matMenuTriggerFor]="menu" matTooltip="Setting"><mat-icon>dehaze</mat-icon></button>
+    <mat-menu #menu="matMenu">
+        <button (click)='Logout()' mat-menu-item>Logout</button>
+
+    </mat-menu> -->
+    <button id="new" mat-button (click)='Logout()' matTooltip="Logout"><mat-icon>person_pin</mat-icon></button>
+
+
+</h2>
 
 
 
-<div class="overflow">
+<div style="overflow: hidden;" class="overflow">
 
     <table mat-table id="customers">
         <thead>
@@ -12,10 +27,8 @@
                 <th>Username</th>
                 <th>Fullname</th>
                 <th>Email</th>
-                <th>Password</th>
-                <th>Confirm Password</th>
-                <th>Contact Number</th>
-                <th> Date of Birth</th>
+                <!-- <th>Contact Number</th> -->
+                <!-- <th> Date of Birth</th> -->
                 <th> Gender </th>
                 <th> House Number</th>
                 <th> Street </th>
@@ -29,10 +42,8 @@
                 <td>{{ item.userName }}</td>
                 <td>{{ item.fullName }}</td>
                 <td>{{ item.email }}</td>
-                <td>{{ item.password }}</td>
-                <td>{{ item.confirmPassword }}</td>
-                <td>{{ item.contactno }}</td>
-                <td>{{ item.dob| date : 'dd/MM/yyyy' }}</td>
+                <!-- <td>{{ item.contactno }}</td> -->
+                <!-- <td>{{ item.dob| date : 'dd/MM/yyyy' }}</td> -->
                 <td>{{ item.gender }}</td>
                 <td>{{ item.houseno }}</td>
                 <td>{{ item.street }}</td>
@@ -41,15 +52,6 @@
                 <td><button (click)="editDialog(i)" mat-button matTooltip="Edit"><mat-icon style="color: green;">create</mat-icon></button>
                     <button (click)="openDialog(i)" mat-button matTooltip="Delete"><mat-icon style="color:red;">delete</mat-icon></button>
                 </td>
-
-                <!-- <td>
-                        <button *ngIf="enableEdit && enableEditIndex == i" (click)="enableEdit=false; cancel()" mat-button matTooltip="Cancel"><mat-icon style="color: black;">cancel</mat-icon></button>
-                        <button *ngIf="enableEdit && enableEditIndex == i" id="saveBtn" (click)="saveSegment()" type="submit" mat-button matTooltip="Save"><mat-icon style="color: blue;">save</mat-icon></button>
-                        <button *ngIf="i != enableEditIndex || enableEditIndex == null" (click)="enableEditMethod($event, i)" mat-button matTooltip="Edit"><mat-icon style="color: green;">create</mat-icon></button>
-                        <button *ngIf="i != enableEditIndex || enableEditIndex == null" (click)="delete(i)" mat-button matTooltip="Delete"><mat-icon style="color:red;">delete</mat-icon></button>
-   
-                    </td> -->
-
 
             </tr>
         </tbody>

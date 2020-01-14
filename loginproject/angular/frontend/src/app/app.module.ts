@@ -16,7 +16,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material';
 import { EditComponent } from './edit/edit.component';
-
+import { MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -38,6 +38,7 @@ import { EditComponent } from './edit/edit.component';
     MatIconModule,
     FormsModule,
     MatDialogModule,
+    MatMenuModule,
 
   ],
   providers: [SharedService],

@@ -19,7 +19,7 @@ form.normal-form {
 img.avatar {
     width: 13%;
     border-radius: 50%;
-    margin-top: 5%;
+    margin-top: 6%;
 }
 
 .controles-container {
@@ -43,16 +43,18 @@ mat-radio-group mat-radio-button {
 }
 
 .class-button {
-    padding-left: 40%;
+    padding-left: 10%;
     padding-top: 10%;
 }
 
 .header {
-    background-color: hsl(251, 73%, 42%);
+    /* background-color: hsl(251, 73%, 42%); */
+    background-color: steelblue;
     padding: 30px;
     text-align: center;
     margin-block-start: 0%;
-    color: white;
+    /* color: white; */
+    color: black;
 }
 
 .cancel-class {
@@ -65,7 +67,7 @@ mat-radio-group mat-radio-button {
 
 .edit-class {
     font-size: 15px;
-    background-color: deeppink;
+    background-color: green;
     width: 86px;
     height: 31px;
     color: white;
@@ -73,4 +75,8 @@ mat-radio-group mat-radio-button {
 
 .text-danger {
     color: red;
+}
+
+.button-display {
+    margin-top: 32px;
 }

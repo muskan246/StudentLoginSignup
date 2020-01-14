@@ -1,50 +1,51 @@
-<h2 mat-dialog-title>Update record</h2>
-<mat-dialog-content>
+<h2 mat-dialog-title><strong>Update record</strong></h2>
+<mat-dialog-content style="overflow:hidden">
     <form [formGroup]="service.details" class="normal-form">
-        <mat-grid-list cols="1" rowHeight="280px">
+        <mat-grid-list cols="1" rowHeight="230px">
             <mat-grid-tile>
 
                 <div>
-                    <mat-form-field>
+
+                    <mat-form-field style="margin-right: 30px;">
                         <input formControlName="fullName" type="text" value="{{formData.fullName}}" matInput placeholder="Full Name">
                     </mat-form-field>
-                    <mat-form-field>
+
+                    <mat-form-field style="margin-right: 30px;">
                         <input formControlName="email" type="email" value={{formData.email}} matInput placeholder="Email">
                     </mat-form-field>
                     <mat-form-field>
                         <input formControlName="password" type="password" value={{formData.password}} matInput placeholder="Password">
                     </mat-form-field>
-                    <mat-form-field>
-                        <input formControlName="confirmPassword" type="password" value={{formData.confirmPassword}} matInput placeholder="Confirm Password">
-                    </mat-form-field>
-                    <mat-form-field>
+
+
+                    <!-- <mat-form-field style="margin-right: 30px;">
                         <input formControlName="contactno" type="tel" value={{formData.contactno}} matInput placeholder="Contact No.">
-                    </mat-form-field>
-                    <mat-form-field>
+                    </mat-form-field> -->
+                    <mat-form-field style="margin-right: 30px;">
                         <input formControlName="houseno" type="text" value={{formData.houseno}} matInput placeholder="House No.">
                     </mat-form-field>
-                    <mat-form-field>
+                    <mat-form-field style="margin-right: 30px;">
                         <input formControlName="street" type="text" value={{formData.street}} matInput placeholder="Street">
                     </mat-form-field>
                     <mat-form-field>
                         <input formControlName="city" type="text" value={{formData.city}} matInput placeholder="City">
                     </mat-form-field>
 
-                    <mat-form-field>
+                    <!-- <mat-form-field>
                         <input formControlName="dob" value="{{formData.dob | date : 'dd/MM/yyyy'}}" matInput placeholder="Date of Birth">
 
-                    </mat-form-field>
+                    </mat-form-field> -->
 
 
                     <mat-radio-group formControlName="gender">
                         <span *ngIf='checkingvalue == "M"'>
 
                                                         <mat-radio-button value="F">Female</mat-radio-button>
-                                                        <mat-radio-button value="M" checked>Male</mat-radio-button>
+                                                        <mat-radio-button style="padding-left: 15px;"value="M" checked>Male</mat-radio-button>
                                                 </span>
                         <span *ngIf='checkingvalue == "F"'>
                                                         <mat-radio-button value="M">Male</mat-radio-button>
-                                                        <mat-radio-button value="F" checked>Female</mat-radio-button>
+                                                        <mat-radio-button style="padding-left: 15px;"value="F" checked>Female</mat-radio-button>
                                                 </span>
 
 

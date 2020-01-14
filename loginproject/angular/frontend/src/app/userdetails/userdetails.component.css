@@ -26,6 +26,15 @@
     color: white;
 }
 
+#new {
+    background: none;
+    border: none;
+    margin-left: 98%;
+    /* background: none; */
+    /* font-size: 23px; */
+    /* color: white; */
+}
+
 #customers button {
     padding: 1%;
     background: none;
@@ -33,7 +42,7 @@
 }
 
 .login-button {
-    margin-left: 95%;
+    margin-left: 98%;
     background: none;
     font-size: 23px;
     color: white;

@@ -31,9 +31,9 @@ export class SharedService {
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl(''),
     confirmPassword: new FormControl(''),
-    contactno: new FormControl(''),
+    // contactno: new FormControl(''),
     gender: new FormControl(''),
-    dob: new FormControl(''),
+    // dob: new FormControl(''),
     houseno: new FormControl(''),
     street: new FormControl(''),
     city: new FormControl(''),
@@ -46,7 +46,7 @@ export class SharedService {
   postApiData() {
     console.log('this is from service fun')
     console.log(this.details.value)
-    return this.http.post(this._url, { "fullName": this.details.value.fullName, 'userName': this.details.value.userName, 'email': this.details.value.email, 'password': this.details.value.password, 'confirmPassword': this.details.value.confirmPassword, 'contactno': this.details.value.contactno, 'gender': this.details.value.gender, 'dob': this.details.value.dob, 'houseno': this.details.value.houseno, 'street': this.details.value.street, 'city': this.details.value.city })
+    return this.http.post(this._url, { "fullName": this.details.value.fullName, 'userName': this.details.value.userName, 'email': this.details.value.email, 'password': this.details.value.password, 'gender': this.details.value.gender, 'houseno': this.details.value.houseno, 'street': this.details.value.street, 'city': this.details.value.city })
 
   }
 
@@ -70,6 +70,6 @@ export class SharedService {
   updateApi(updateData) {
     console.log('Update')
     console.log("////", updateData);
-    return this.http.put('http://127.0.0.1:3000/update', { "userName": updateData.userName, "fullName": updateData.fullName, "email": updateData.email, "password": updateData.password, "confirmPassword": updateData.confirmPassword, "contactno": updateData.contactno, "dob": updateData.dob, "gender": updateData.gender, "houseno": updateData.houseno, "street": updateData.street, "city": updateData.city })
+    return this.http.put('http://127.0.0.1:3000/update', { "userName": updateData.userName, "fullName": updateData.fullName, "email": updateData.email, "password": updateData.password, "gender": updateData.gender, "houseno": updateData.houseno, "street": updateData.street, "city": updateData.city })
   }
 }

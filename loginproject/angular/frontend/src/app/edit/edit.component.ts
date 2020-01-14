@@ -15,8 +15,8 @@ export class EditComponent implements OnInit {
 
   ngOnInit() {
     this.formData = this.service.getData();
-    console.log("PPPPPP",this.formData)
-    console.log("dob",this.formData.dob);
+    //console.log("PPPPPP",this.formData)
+    //console.log("dob",this.formData.dob);
       
     
     this.checkingvalue = this.formData.gender
@@ -33,12 +33,12 @@ export class EditComponent implements OnInit {
   this.formData.email = this.service.details.value.email
   if (this.service.details.value.password != "")
   this.formData.password = this.service.details.value.password
-  if (this.service.details.value.confirmPassword != "")
-  this.formData.confirmPassword = this.service.details.value.confirmPassword
+  // if (this.service.details.value.confirmPassword != "")
+  // this.formData.confirmPassword = this.service.details.value.confirmPassword
   if (this.service.details.value.contactno != "")
   this.formData.contactno = this.service.details.value.contactno
-  if (this.service.details.value.dob != "")
-  this.formData.dob = this.service.details.value.dob
+  //if (this.service.details.value.dob != "")
+  // this.formData.dob = this.service.details.value.dob
   if (this.service.details.value.gender != "")
   this.formData.gender = this.service.details.value.gender
   if (this.service.details.value.houseno != "")

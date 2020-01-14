@@ -1,7 +1,9 @@
 .login-button {
     margin-left: 95%;
-    background: none;
-    font-size: 23px;
+    font-size: 17px;
+    width: 31%;
+    background-color: green;
+    height: 33px;
     color: white;
 }
 
@@ -22,10 +24,13 @@
 
 .new-button {
     color: white;
-    background-color: green;
-    font-family: sans-serif;
     font-size: 17px;
-    width: 35%;
-    margin-left: 121px;
-    margin-top: 27px;
+    width: 31%;
+    margin-left: 20px;
+    /* margin-top: 27px; */
+    /* font-size: 15px; */
+    background-color: green;
+    /* width: 86px; */
+    height: 33px;
+    color: white;
 }

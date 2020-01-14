@@ -79,8 +79,8 @@ export class UserdetailsComponent implements OnInit {
     this.editIndex = i
     console.log("yewww", this.res[this.editIndex].fullName)
     let dialogRefEdit = this.dialog.open(EditComponent, {
-      height: '400px',
-      width: '630px',
+      //height: '400px',
+      width: '700px',
     });
     dialogRefEdit.afterClosed().subscribe(result => {
       console.log(`Edit result: ${result}`);

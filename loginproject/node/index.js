@@ -38,7 +38,7 @@ app.post('/user/insertdetails', function(req, res) {
 
     var data = req.body;
     console.log(data);
-    userdata = { fullName: data.fullName, userName: data.userName, email: data.email, password: data.password, confirmPassword: data.confirmPassword, contactno: data.contactno, gender: data.gender, dob: data.dob }
+    userdata = { fullName: data.fullName, userName: data.userName, email: data.email, password: data.password, gender: data.gender }
     addressdata = { userName: data.userName, houseno: data.houseno, street: data.street, city: data.city }
     console.log(data.fullName);
     console.log(userdata);
@@ -87,14 +87,14 @@ app.post('/Login', function(req, res) {
 
 app.post('/Details', function(req, res) {
     if (req.body.userName == 'admin') {
-        mysqlConnection.query('select userTable.userName, userTable.fullName, userTable.email, userTable.password, userTable.confirmPassword, userTable.contactno, userTable.dob, userTable.gender, address_table1.houseno, address_table1.street, address_table1.city from userTable INNER JOIN address_table1 ON userTable.userName = address_table1.userName ', function(error, results, fields) {
+        mysqlConnection.query('select userTable.userName, userTable.fullName, userTable.email, userTable.password,   userTable.gender, address_table1.houseno, address_table1.street, address_table1.city from userTable INNER JOIN address_table1 ON userTable.userName = address_table1.userName ', function(error, results, fields) {
             if (!error) {
                 res.end(JSON.stringify(results));
             } else
                 console.log(error);
         })
     } else {
-        mysqlConnection.query('select userTable.userName, userTable.fullName, userTable.email, userTable.password, userTable.confirmPassword, userTable.contactno, userTable.dob, userTable.gender, address_table1.houseno, address_table1.street, address_table1.city from userTable INNER JOIN address_table1 ON userTable.userName = address_table1.userName AND userTable.userName = ?', [req.body.userName], function(error, results, fields) {
+        mysqlConnection.query('select userTable.userName, userTable.fullName, userTable.email, userTable.password, userTable.gender, address_table1.houseno, address_table1.street, address_table1.city from userTable INNER JOIN address_table1 ON userTable.userName = address_table1.userName AND userTable.userName = ?', [req.body.userName], function(error, results, fields) {
             if (!error) {
                 res.end(JSON.stringify(results));
             } else
@@ -115,7 +115,7 @@ app.post('/Details/delete', function(req, res) {
 
 app.put('/update', function(req, res) {
     console.log(req.body);
-    mysqlConnection.query('UPDATE userTable SET `fullname`=?,`email`=?,`password`=?, `confirmPassword`=?, `contactno`=?, `dob`=?, `gender`=? where `userName`=?', [req.body.fullName, req.body.email, req.body.password, req.body.confirmPassword, req.body.contactno, req.body.dob, req.body.gender, req.body.userName], function(error, results, fields) {
+    mysqlConnection.query('UPDATE userTable SET `fullname`=?,`email`=?,`password`=?,  `gender`=? where `userName`=?', [req.body.fullName, req.body.email, req.body.password, req.body.gender, req.body.userName], function(error, results, fields) {
         if (error) {
             throw error;
         } else {
